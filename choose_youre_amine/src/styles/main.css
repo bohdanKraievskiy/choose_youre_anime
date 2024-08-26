@@ -1,0 +1,30 @@
+.slick-slide {
+    padding: 10px;
+}
+
+.frame {
+    perspective: 1000px;
+}
+
+.frame-inner {
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.frame-inner:hover {
+    transform: rotateY(10deg);
+}
+
+.frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
