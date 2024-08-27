@@ -3,6 +3,7 @@
 
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -16,12 +17,20 @@
   }
 }
 
+._ca{
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  font-size: 1vw !important;
+}
+
 .App-header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0,0,0,.9);
+  background: rgba(0,0,0,0.9);
   height: 10vmin;
   min-height: 10vh;
   display: flex;
