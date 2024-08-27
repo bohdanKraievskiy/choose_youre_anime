@@ -1,30 +1,179 @@
-.slick-slide {
-    padding: 10px;
+body{
+    background-image: url("../../public/photo_2024-08-27_21-03-26.jpg");
+    background-size: cover;
+    font-family: 'Ninja Naruto', sans-serif;
+    overflow: hidden;
+}
+.carousel-container {
+    padding: 80px;
+    background: rgba(0,0,0,.8);
+    width: 105%;
+    margin-left: -5% !important;
+    margin: 8vw auto;
+    border-radius: 16px;
+}
+
+._carousel_text{
+    z-index: 1000;
+    font-size: 40px;
+    margin: 40px;
+    color: white;
+}
+
+._footer_text{
+    font-size: 100px;
+    font-weight: bold;
+    --bg-size: 400%;
+    --color-one: hsla(241, 53%, 65%, 0.65);
+    --color-two: hsl(155, 49%, 51%);
+    background: linear-gradient(
+            90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)
+    ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .boujee-text {
+        animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
+    }
 }
 
 .frame {
-    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Приховати частини зображення, які виходять за межі */
 }
 
 .frame-inner {
-    transform: rotateY(0deg);
-    transition: transform 0.5s;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.frame-inner:hover {
-    transform: rotateY(10deg);
+    width: 100%;
+    height: 300px; /* Задайте бажану висоту каруселі */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .frame-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Обійти зображення, зберігаючи пропорції */
+    border-radius: 8px;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px !important; /* Задайте бажану ширину */
+    height: 300px; /* Задайте бажану висоту */
+    overflow: hidden; /* Приховати частини зображення, які виходять за межі */
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+
+.frame:hover {
+    transform: scale(0.9) rotateZ(1deg); /* Збільшуємо та повертаємо при наведенні */
+}
+
+
+.frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обійти зображення, зберігаючи пропорції */
+    z-index: 1000;
+}
+
+._coin{
+    font-size: 70px;
+}
+
+._play{
+    user-select: contain;
+    text-align: center;
+    place-content: center;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid var(--color-one);
+    font-size: 40px !important;
+    place-items: end !important;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+._play {
+    cursor: pointer; /* Зміна вигляду курсора на 'pointer' */
+    border: 1px solid var(--color-one);
     border-radius: 10px;
+    padding: 20px;
+    background-color: transparent; /* Фон кнопки */
+    color: var(--color-one);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+._carousel_text{
+    cursor: pointer; /* Зміна вигляду курсора на 'pointer' */
+    border: 1px solid var(--color-one);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: transparent; /* Фон кнопки */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.App-header ._footer_text {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.App-header ._footer_text:hover {
+    transform: scale(1.1);
+}
+
+._play:hover {
+    background-color: var(--color-one);
+    color: white;
+    transform: scale(1.1);
+}
+
+._play:active {
+    background-color: var(--color-two);
+    transform: scale(0.95);
+}
+
+
+._carousel_text:hover {
+    background-color: var(--color-one);
+    color: #dd4dd1;
+    transform: scale(1.1);
+}
+
+._carousel_text:active {
+    background-color: var(--color-two);
+    transform: scale(0.95);
 }
