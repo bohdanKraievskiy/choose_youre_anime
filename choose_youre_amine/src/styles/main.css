@@ -194,7 +194,7 @@ body{
     object-fit: cover;
     cursor: pointer;
     position: relative;
-    width: 7.5%;
+    width: 6%;
     height: auto;
     transition: transform 1.3s ease;
 }
