@@ -3,13 +3,12 @@ body{
     background-size: cover;
     font-family: 'Ninja Naruto', sans-serif;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.3);
     z-index: -1;
+
 }
 .carousel-container {
     padding: 80px;
     padding-top: 190px;
-    background: rgba(0,0,0,.8);
     width: 105%;
     margin-left: -5% !important;
     margin-right: 8vw ;
@@ -129,15 +128,16 @@ body{
     font-size: 1.5vw !important;
     place-items: end !important;
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 50px;
+
 }
 
 ._play {
     cursor: pointer; /* Зміна вигляду курсора на 'pointer' */
     border: 1px solid var(--color-one);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     background-color: transparent; /* Фон кнопки */
     color: var(--color-one);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -187,7 +187,6 @@ body{
     height: 124px;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.8);
 }
 
 ._sotials_media{
