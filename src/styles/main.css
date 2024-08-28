@@ -2,7 +2,7 @@ body{
     background-image: url("../../public/photo_2024-08-27_21-03-26.jpg");
     background-size: cover;
     font-family: 'Ninja Naruto', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
