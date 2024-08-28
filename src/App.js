@@ -35,7 +35,7 @@ function App() {
           </div>
           <footer style={{
               color: "pink",
-              background: "rgba(0,0,0,.5)",
+              background: "rgba(0,0,0,.9)",
               height: 60,
               placeContent: "center",
               placeItems:"center",marginLeft: "auto",
