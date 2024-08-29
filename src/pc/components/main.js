@@ -76,7 +76,7 @@ const AnimeCarousel = () => {
         <div className="carousel-container">
             <Slider {...settings}>
                 {images.map((image, index) => (
-                    <div key={index} style={{width:"10vw"}} className="frame">
+                    <div key={index} style={{width:"10vw" ,height:"5vw"}} className="frame">
                         <img src={image} alt={`Frame ${index + 1}`} className="frame-img"/>
 
                     </div>
