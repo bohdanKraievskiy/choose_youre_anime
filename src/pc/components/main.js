@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Slider from 'react-slick';
 import '../styles/main.css';
 
@@ -21,28 +21,62 @@ const AnimeCarousel = () => {
         `${process.env.PUBLIC_URL}/anime/магічка сукуно.gif`,
     ];
 
-    const settings = {
-        dots: true, // Показувати точки навігації
-        infinite: true, // Безкінечне гортання
-        speed: 500, // Швидкість анімації (в мілісекундах)
-        slidesToShow: 6, // Скільки слайдів показувати одночасно
-        slidesToScroll: 3, // Скільки слайдів переміщати при гортанні
-        autoplay: true, // Автоматичне гортання
-        autoplaySpeed: 1000, // Інтервал автоматичного гортання
-        pauseOnHover: true, // Зупинка автоматичного гортання при наведенні
-        centerMode: true, // Центрування активного слайда
-        focusOnSelect: true, // Гортання при натисканні на слайд
-        adaptiveHeight: true // Адаптація висоти каруселі під висоту слайда
-    };
     const handleShareInviteLink = () => {
         const shareLink = `https://t.me/anime_world_fun_bot`;
         window.open(shareLink, '_blank');
     };
-    return (
+    const [isMobile, setIsMobile] = useState(true);
+
+    useEffect(() => {
+        const checkIfMobile = () => {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                setIsMobile(true);
+                return;
+            }
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                setIsMobile(true);
+                return;
+            }
+
+            setIsMobile(false);
+        };
+
+        checkIfMobile();
+    },[])
+
+    const settings = isMobile ? {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true,
+        centerMode: true,
+        focusOnSelect: true,
+        adaptiveHeight: true,
+    } : {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true,
+        centerMode: true,
+        focusOnSelect: true,
+        adaptiveHeight: true,
+    };
+        return (
         <div className="carousel-container">
             <Slider {...settings}>
                 {images.map((image, index) => (
-                    <div key={index} className="frame">
+                    <div key={index} style={{width:"10vw"}} className="frame">
                         <img src={image} alt={`Frame ${index + 1}`} className="frame-img"/>
 
                     </div>

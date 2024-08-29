@@ -22,7 +22,6 @@ function App() {
         window.open(shareLink, '_blank');
     };
   return (
-
       <div className="App">
           <div className="App-header">
               <div className="_footer_text _ca"
@@ -33,9 +32,9 @@ function App() {
               </div>
           </div>
           <AnimeCarousel/>
-          <div className="_carousel_text _footer_text" onClick={handleShareInviteLink}>WHO I`M?</div>
+          <div className="_carousel_text _footer_text" style={{fontSize:"2vw"}} onClick={handleShareInviteLink}>WHO I`M?</div>
           <div className="_sotials">
-              <img style={{width: "4.2%"}} onClick={handleShareInviteLink2}
+              <img onClick={handleShareInviteLink2}
                    src={`${process.env.PUBLIC_URL}/Telegram-removebg-preview.png`} className="_sotials_media"/>
               <img onClick={handleShareInviteLink3}
                    src={`${process.env.PUBLIC_URL}/new-twitter-logo-x-with-circle-line-badge_692249-34-removebg-preview.png`}

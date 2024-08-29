@@ -10,7 +10,7 @@ body{
     padding: 80px;
     padding-bottom: 20px !important;
     width: 105%;
-    margin-left: -5% !important;
+    margin-left: -5% ;
     margin-right: 8vw ;
     border-radius: 16px;
 }
@@ -93,7 +93,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw !important; /* Задайте бажану ширину */
     height: 12vw; /* Задайте бажану висоту */
     overflow: hidden; /* Приховати частини зображення, які виходять за межі */
     transition: transform 0.3s ease;
@@ -143,7 +142,6 @@ body{
 }
 
 ._carousel_text{
-    font-size: 2vw !important;
     cursor: pointer; /* Зміна вигляду курсора на 'pointer' */
     padding: 20px;
     background-color: transparent; /* Фон кнопки */
