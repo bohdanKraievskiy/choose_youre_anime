@@ -48,7 +48,7 @@ const AnimeCarousel = () => {
                     </div>
                 ))}
             </Slider>
-            <div className="_carousel_text _footer_text" onClick={handleShareInviteLink}>WHO I`M?</div>
+
         </div>
     );
 };

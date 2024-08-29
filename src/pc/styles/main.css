@@ -1,5 +1,5 @@
 body{
-    background-image: url("../../public/photo_2024-08-27_21-03-26.jpg");
+    background-image: url("../../../public/photo_2024-08-27_21-03-26.jpg");
     background-size: cover;
     font-family: 'Ninja Naruto', sans-serif;
     overflow: hidden;
@@ -8,11 +8,10 @@ body{
 }
 .carousel-container {
     padding: 80px;
-    padding-top: 190px;
+    padding-bottom: 20px !important;
     width: 105%;
     margin-left: -5% !important;
     margin-right: 8vw ;
-    margin-top: 95px;
     border-radius: 16px;
 }
 
@@ -28,8 +27,8 @@ body{
     font-size: 30vw;
     font-weight: bold;
     --bg-size: 400%;
-    --color-one: hsla(241, 53%, 65%, 0.65);
-    --color-two: hsl(155, 49%, 51%);
+    --color-one: hsla(0, 0%, 99%, 0.65);
+    --color-two: hsl(0, 0%, 57%);
     background: linear-gradient(
             90deg,
             var(--color-one),
@@ -128,7 +127,7 @@ body{
     font-size: 1.5vw !important;
     place-items: end !important;
     position: absolute;
-    top: 40px;
+    top: 15px;
     right: 50px;
 
 }
